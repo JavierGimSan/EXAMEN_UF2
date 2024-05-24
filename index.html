@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="CSS/style.css"> 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<title>Restaurant</title>
 	</head>
 	<body>
@@ -20,6 +21,45 @@
 				</div>
 			</div>
 		</section>
+		<section>
+			<h2>Imatge responsiva</h2>
+			<picture>
+				<source media="(min-width:1024px)" srcset="IMAGES/img_responsive2_escriptori.png">
+				<source media="(min-width:640px)" srcset="IMAGES/img_responsive2_1024.png">
+				<img src="IMAGES/img_responsive2_640.png" alt="Imatge d'un restaurant">
+			</picture>
+		</section>
+		<div class="css_div">Capa</div>
+		<h2>Video</h2>
+		<section class="container-video">
+			<video id="video" autoplay muted>
+				<source src="VIDEOS/video.mp4">
+			</video>		
+		</section>
+		<span class="material-symbols-outlined" id="boto_play" onclick="playVideo()">
+			play_arrow
+		</span>
+		<span class="material-symbols-outlined" id="boto_pause" onclick="pauseVideo()">
+			pause
+		</span>
+
+		<script>
+			var videoExamen=document.getElementById("video");
+			var play=document.getElementById("boto_play");
+			var pause=document.getElementById("boto_pause");
+
+			function playVideo(){
+				if (videoExamen.paused){
+					videoExamen.play();
+				}
+			}
+			function pauseVideo(){
+				if(videoExamen.play){
+					videoExamen.pause()
+				}
+			}
+		</script>
+		
 	</body>
 </html>
 
@@ -41,8 +81,3 @@
 
 
 
-<!--<picture>
-	<source media="(min-width:768px)" srcset="">
-	<source media="(min-width:576px)" srcset="">
-	<img src="" alt="Imatge de presentció del restaurant. Taula on estàn omplint una copa de vi blanc">
-  </picture>-->
